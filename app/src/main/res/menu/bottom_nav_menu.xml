@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/createJourney"
+        android:icon="@drawable/create_journey"
+        android:title="Create" />
+    <item
+        android:id="@+id/joinJourney"
+        android:icon="@drawable/join_journey"
+        android:title="Join" />
+    <item
+        android:id="@+id/map"
+        android:icon="@drawable/location_now"
+        android:title="Location" />
+    <item
+        android:id="@+id/camera"
+        android:icon="@drawable/take_pictures"
+        android:title="Camera" />
+</menu>
