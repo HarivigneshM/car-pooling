@@ -59,6 +59,8 @@ public class landingPage extends AppCompatActivity {
                 replaceFragment(new cameraFragment());
             } else if (itemId == R.id.map) {
                 replaceFragment(new mapFragment());
+            } else if (itemId == R.id.settings) {
+                replaceFragment(new settingsFragment());
             }
             return true;
         });
