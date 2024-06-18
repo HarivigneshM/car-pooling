@@ -4,6 +4,7 @@ import static android.content.ContentValues.TAG;
 
 import android.os.Bundle;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
 import androidx.activity.EdgeToEdge;
@@ -12,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -40,6 +42,7 @@ public class landingPage extends AppCompatActivity {
     FirebaseFirestore fstore3;
     FirebaseAuth fauth3;
     TextView name;
+    FloatingActionButton mapFragmentStart;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,12 +60,17 @@ public class landingPage extends AppCompatActivity {
                 replaceFragment(new JoinJourneyFragment());
             } else if (itemId == R.id.camera) {
                 replaceFragment(new cameraFragment());
-            } else if (itemId == R.id.map) {
-                replaceFragment(new mapFragment());
             } else if (itemId == R.id.settings) {
                 replaceFragment(new settingsFragment());
             }
             return true;
+        });
+        mapFragmentStart=findViewById(R.id.map);
+        mapFragmentStart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                replaceFragment(new mapFragment());
+            }
         });
 //        fauth3=FirebaseAuth.getInstance();
 //        fstore3=FirebaseFirestore.getInstance();

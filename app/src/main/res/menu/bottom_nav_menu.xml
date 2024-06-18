@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="HardcodedText">
 
-    <item
+<item
         android:id="@+id/createJourney"
         android:icon="@drawable/create_journey"
         android:title="Create" />
@@ -10,9 +14,9 @@
         android:icon="@drawable/join_journey"
         android:title="Join" />
     <item
-        android:id="@+id/map"
-        android:icon="@drawable/location_now"
-        android:title="Location" />
+        android:id="@+id/fab"
+        android:enabled="false"
+        android:title="" />
     <item
         android:id="@+id/camera"
         android:icon="@drawable/take_pictures"
