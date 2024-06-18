@@ -4,38 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/login_primary"
     android:fitsSystemWindows="true"
     tools:context=".landingPage">
 
     <FrameLayout
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="@+id/flFragment">
+        android:id="@+id/fragmentFrame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
     </FrameLayout>
 
-    <LinearLayout
-        android:id="@+id/flFragment"
-        android:layout_width="match_parent"
-        android:layout_height="654dp"
-        android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/welcomeText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Welcome,"
-            android:textColor="@color/login_secondary"
-            android:textSize="34sp" />
-
-        <TextView
-            android:id="@+id/name"
-            android:layout_width="match_parent"
-            android:layout_height="47dp"
-            android:textColor="@color/login_secondary"
-            android:textSize="24sp" />
-    </LinearLayout>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView"
@@ -47,6 +29,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
+        app:itemActiveIndicatorStyle="@color/login_primary"
         app:menu="@menu/bottom_nav_menu" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

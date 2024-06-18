@@ -15,6 +15,9 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -45,20 +48,39 @@ public class landingPage extends AppCompatActivity {
         binding = ActivityLandingPageBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-
-        fauth3=FirebaseAuth.getInstance();
-        fstore3=FirebaseFirestore.getInstance();
-        name=findViewById(R.id.name);
-
-        String uid=fauth3.getCurrentUser().getUid();
-        Log.d(TAG, "onCreate: "+uid);;
-        DocumentReference documentReference=fstore3.collection("users").document(uid);
-        documentReference.addSnapshotListener(this, new EventListener<DocumentSnapshot>() {
-            @Override
-            public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
-                name.setText(value.getString("name"));
+        replaceFragment(new CreateJourneyFragment());
+        binding.bottomNavigationView.setOnItemSelectedListener(item -> {
+            int itemId = item.getItemId();
+            if (itemId == R.id.createJourney) {
+                replaceFragment(new CreateJourneyFragment());
+            } else if (itemId == R.id.joinJourney) {
+                replaceFragment(new JoinJourneyFragment());
+            } else if (itemId == R.id.camera) {
+                replaceFragment(new cameraFragment());
+            } else if (itemId == R.id.map) {
+                replaceFragment(new mapFragment());
             }
+            return true;
         });
+//        fauth3=FirebaseAuth.getInstance();
+//        fstore3=FirebaseFirestore.getInstance();
+//        name=findViewById(R.id.name);
+//
+//        String uid=fauth3.getCurrentUser().getUid();
+//        Log.d(TAG, "onCreate: "+uid);;
+//        DocumentReference documentReference=fstore3.collection("users").document(uid);
+//        documentReference.addSnapshotListener(this, new EventListener<DocumentSnapshot>() {
+//            @Override
+//            public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
+//                name.setText(value.getString("name"));
+//            }
+//        });
+    }
+    private void replaceFragment(Fragment fragment){
+        FragmentManager fragmentManager=getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.fragmentFrame,fragment);
+        fragmentTransaction.commit();
     }
 
 }

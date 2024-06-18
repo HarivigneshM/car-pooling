@@ -39,6 +39,11 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        fAuth1=FirebaseAuth.getInstance();
+        if(fAuth1.getCurrentUser() != null){
+            Intent intent=new Intent(getApplicationContext(), landingPage.class);
+            startActivity(intent);
+        }
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
@@ -46,6 +51,8 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+
         TextView toSignUp=findViewById(R.id.login_click_here);
         toSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -57,7 +64,6 @@ public class MainActivity extends AppCompatActivity {
         LoginEmail=findViewById(R.id.LoginUsername);
         LoginPassword=findViewById(R.id.LoginPassword);
         login=findViewById(R.id.LoginButton);
-        fAuth1=FirebaseAuth.getInstance();
         fStore1=FirebaseFirestore.getInstance();
         login.setOnClickListener(new View.OnClickListener() {
             @Override
