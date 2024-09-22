@@ -26,7 +26,7 @@ This is an Android application that simulates carpooling functionalities. It is 
 
 1. Clone the repository to your local machine:
    ```bash
-   git clone https://github.com/your-username/carpooling-app.git
+   git clone https://github.com/HarivigneshM/car-pooling.git
    ```
 
 2. **Open the project in Android Studio**.
