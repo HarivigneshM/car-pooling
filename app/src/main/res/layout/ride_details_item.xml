@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:layout_margin="10sp"
+    android:background="@drawable/round_corners"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/rideDriver"
+        android:layout_width="371dp"
+        android:layout_height="wrap_content"
+        android:text="Driver Name"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/rideFromLocation"
+        android:layout_width="371dp"
+        android:layout_height="wrap_content"
+        android:text="From Location"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/rideToLocation"
+        android:layout_width="371dp"
+        android:layout_height="wrap_content"
+        android:text="To Location"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/ridePhoneNumber"
+        android:layout_width="371dp"
+        android:layout_height="wrap_content"
+        android:text="Phone Number"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/rideDateTime"
+        android:layout_width="371dp"
+        android:layout_height="wrap_content"
+        android:text="Date and Time"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/rideTotalSeats"
+        android:layout_width="371dp"
+        android:layout_height="wrap_content"
+        android:text="Total Seats"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/rideAvailableSeats"
+        android:layout_width="371dp"
+        android:layout_height="wrap_content"
+        android:text="Available Seats"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/ridePrice"
+        android:layout_width="371dp"
+        android:layout_height="wrap_content"
+        android:text="Price"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/rideCarModel"
+        android:layout_width="371dp"
+        android:layout_height="wrap_content"
+        android:text="Car Model"
+        android:textSize="14sp" />
+
+    <ImageView
+        android:id="@+id/rideCarPhoto"
+        android:layout_width="371dp"
+        android:layout_height="200dp"
+        android:contentDescription="Car Photo"
+        android:scaleType="centerCrop" />
+
+    <Button
+        android:id="@+id/leaveRideButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Leave Ride"
+        android:visibility="gone"
+        android:textColor="@color/white"
+        android:background="@drawable/button_opening"/>
+
+    <Button
+        android:id="@+id/deleteRideButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Delete Ride"
+
+        android:textColor="@color/white"
+        android:visibility="gone"
+        android:background="@drawable/button_opening"/>
+
+</LinearLayout>

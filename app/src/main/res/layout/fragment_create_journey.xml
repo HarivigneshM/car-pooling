@@ -8,15 +8,233 @@
     android:background="@color/login_primary"
     tools:context=".CreateJourneyFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="164dp"
-        android:layout_height="340dp"
-        android:text="create"
+    <FrameLayout
+        android:layout_width="412dp"
+        android:layout_height="842dp"
+        android:background="@drawable/car_doodle"
+        android:backgroundTint="@color/login_secondary"
+        android:foregroundTint="@color/login_secondary"
+        android:foregroundTintMode="add"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
 
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal|center_vertical"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginBottom="80sp"
+        app:layout_constraintVertical_bias="0.0">
+
+        <ScrollView
+            android:layout_width="336dp"
+            android:background="@drawable/round_corners"
+            android:layout_height="650dp">
+
+            <LinearLayout
+                android:layout_width="336dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="20sp"
+                android:paddingTop="50px"
+                android:paddingRight="20sp">
+
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:text="Create Journey"
+                    android:textAlignment="center"
+                    android:textColor="@color/login_primary"
+                    android:textSize="34sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/DriverName"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/input_login_corners"
+                    android:backgroundTint="#3BFFFFFF"
+                    android:ems="10"
+                    android:hint="Driver Name"
+                    android:inputType="text"
+                    android:paddingLeft="25sp"
+                    android:textColor="@color/login_primary"
+                    android:textColorHint="@color/login_primary"
+                    android:textStyle="bold" />
+
+
+                <EditText
+                    android:id="@+id/fromLocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/input_login_corners"
+                    android:backgroundTint="#3BFFFFFF"
+                    android:ems="10"
+                    android:hint="From Location"
+                    android:inputType="text"
+                    android:paddingLeft="25sp"
+                    android:textColor="@color/login_primary"
+                    android:textColorHint="@color/login_primary"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/toLocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/input_login_corners"
+                    android:backgroundTint="#3BFFFFFF"
+                    android:ems="10"
+                    android:hint="To Location"
+                    android:inputType="text"
+                    android:paddingLeft="25sp"
+                    android:textColor="@color/login_primary"
+                    android:textColorHint="@color/login_primary"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/phoneNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/input_login_corners"
+                    android:backgroundTint="#3BFFFFFF"
+                    android:ems="10"
+                    android:hint="Phone No."
+                    android:inputType="phone"
+                    android:paddingLeft="25sp"
+                    android:textColor="@color/login_primary"
+                    android:textColorHint="@color/login_primary"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/dot"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/input_login_corners"
+                    android:backgroundTint="#3BFFFFFF"
+                    android:clickable="true"
+                    android:ems="10"
+                    android:focusable="false"
+                    android:hint="Driver Name"
+                    android:inputType="date"
+                    android:paddingLeft="25sp"
+                    android:text="DoT"
+                    android:textColor="@color/login_primary"
+                    android:textColorHint="@color/login_primary"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/totalSeats"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/input_login_corners"
+                    android:backgroundTint="#3BFFFFFF"
+                    android:ems="10"
+                    android:hint="Total Seats"
+                    android:inputType="number"
+                    android:paddingLeft="25sp"
+                    android:textColor="@color/login_primary"
+                    android:textColorHint="@color/login_primary"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/availableSeats"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/input_login_corners"
+                    android:backgroundTint="#3BFFFFFF"
+                    android:ems="10"
+                    android:hint="Available Seats"
+                    android:inputType="number"
+                    android:paddingLeft="25sp"
+                    android:textColor="@color/login_primary"
+                    android:textColorHint="@color/login_primary"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/price"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/input_login_corners"
+                    android:backgroundTint="#3BFFFFFF"
+                    android:ems="10"
+                    android:hint="Price per head"
+                    android:inputType="number"
+                    android:paddingLeft="25sp"
+                    android:textColor="@color/login_primary"
+                    android:textColorHint="@color/login_primary"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/carModel"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/input_login_corners"
+                    android:backgroundTint="#3BFFFFFF"
+                    android:ems="10"
+                    android:hint="Car Model"
+                    android:inputType="text"
+                    android:paddingLeft="25sp"
+                    android:textColor="@color/login_primary"
+                    android:textColorHint="@color/login_primary"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_margin="5sp">
+
+                    <ImageView
+                        android:id="@+id/carPhoto"
+                        android:layout_width="0dp"
+                        android:layout_height="120dp"
+                        android:layout_weight="1"
+                        tools:src="@tools:sample/avatars" />
+
+                    <Button
+
+                        android:id="@+id/carPhotoButton"
+                        android:layout_width="0dp"
+                        android:layout_height="120dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_opening"
+                        android:text="Take Car Photo"
+                        android:textColor="@color/white"/>
+
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/create"
+                    android:background="@drawable/button_opening"
+                    android:text="Create Journey"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:layout_margin="5sp"/>
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

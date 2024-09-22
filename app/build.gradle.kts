@@ -42,9 +42,14 @@ dependencies {
     implementation(libs.firebase.firestore)
     implementation(libs.navigation.fragment)
     implementation(libs.navigation.ui)
+    implementation(libs.play.services.location)
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
-
+    implementation("com.google.android.gms:play-services-maps:19.0.0")
+    implementation ("com.google.maps.android:android-maps-utils:3.8.0")
+    implementation ("com.google.firebase:firebase-storage:19.2.1")
+    implementation ("com.squareup.picasso:picasso:2.71828")
+    implementation ("com.github.bumptech.glide:glide:4.16.0")
 
 }

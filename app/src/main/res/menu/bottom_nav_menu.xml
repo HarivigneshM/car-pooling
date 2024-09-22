@@ -19,8 +19,8 @@
         android:title="" />
     <item
         android:id="@+id/camera"
-        android:icon="@drawable/take_pictures"
-        android:title="Camera" />
+        android:icon="@android:drawable/ic_menu_myplaces"
+        android:title="Rides" />
     <item
         android:id="@+id/settings"
         android:icon="@drawable/settings"

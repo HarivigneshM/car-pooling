@@ -1,15 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/login_primary"
     tools:context=".mapFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="map" />
+    <FrameLayout
+        android:layout_width="412dp"
+        android:layout_height="842dp"
+        android:background="@drawable/car_doodle"
+        android:backgroundTint="@color/login_secondary"
+        android:foregroundTint="@color/login_secondary"
+        android:foregroundTintMode="add"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/mapView"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="360dp"
+            android:layout_height="650dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/round_corners" />
+    </FrameLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/location"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="bottom|fill_vertical"
+        android:layout_margin="24dp"
+        android:src="@drawable/ic_action_name"
+        app:backgroundTint="@color/login_secondary"
+        app:fabCustomSize="50dp"
+        app:layout_anchorGravity="center"
+        app:maxImageSize="35dp" />
 </FrameLayout>

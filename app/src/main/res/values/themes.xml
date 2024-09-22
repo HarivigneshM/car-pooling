@@ -7,4 +7,9 @@
         <item name="android:statusBarColor">@color/login_secondary</item>
     </style>
 
+    <style name="CustomButtonStyle" parent="Widget.MaterialComponents.Button">
+        <item name="android:backgroundTint">@color/login_secondary</item>
+        <item name="android:textColor">@color/login_primary</item>
+    </style>
+
 </resources>

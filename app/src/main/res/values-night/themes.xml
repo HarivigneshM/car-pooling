@@ -1,7 +1,11 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.CarPooling" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="Base.Theme.CarPooling" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Customize your dark theme here. -->
         <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <item name="colorPrimary">@color/login_primary</item>
+        <item name="colorPrimaryVariant">@color/white</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:statusBarColor">@color/login_secondary</item>
     </style>
 </resources>

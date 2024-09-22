@@ -2,6 +2,10 @@ package com.example.carpooling;
 
 import static android.content.ContentValues.TAG;
 
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -15,6 +19,7 @@ import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -36,13 +41,14 @@ public class MainActivity extends AppCompatActivity {
     Button login;
     FirebaseAuth fAuth1;
     FirebaseFirestore fStore1;
+    String name1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         fAuth1=FirebaseAuth.getInstance();
-        if(fAuth1.getCurrentUser() != null){
-            Intent intent=new Intent(getApplicationContext(), landingPage.class);
-            startActivity(intent);
+        if(fAuth1.getCurrentUser() != null) {
+            createNotificationChannel();
+            addNotification();
         }
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
@@ -81,9 +87,10 @@ public class MainActivity extends AppCompatActivity {
                             documentReference.addSnapshotListener(new EventListener<DocumentSnapshot>() {
                                 @Override
                                 public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
+                                    //name1=value.getString("name");
                                     Toast.makeText(MainActivity.this, "Login Successsfull", Toast.LENGTH_SHORT).show();
-                                    Intent intent=new Intent(getApplicationContext(), landingPage.class);
-                                    startActivity(intent);
+                                    createNotificationChannel();
+                                    addNotification();
                                 }
                             });
                         }
@@ -95,4 +102,37 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+    private void addNotification() {
+        NotificationCompat.Builder builder =
+                new NotificationCompat.Builder(this, "default_channel")
+                        .setSmallIcon(R.drawable.ic_stat_name) // You need to set a small icon
+                        .setContentTitle("Welcome ")
+                        .setContentText("Hope You'll have a great day!!")
+                        .setTicker("Login successfull")
+                        .setPriority(NotificationCompat.PRIORITY_DEFAULT);
+
+        Intent intent = new Intent(getApplicationContext(), landingPage.class);
+        PendingIntent contentIntent = PendingIntent.getActivity(this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+        builder.setContentIntent(contentIntent);
+
+        // Add as notification
+        NotificationManager manager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+        manager.notify(0, builder.build());
+        startActivity(intent);
+    }
+
+    private void createNotificationChannel() {
+        // Check if the device is running Android 8.0 or higher
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
+            CharSequence name = "Default Channel";
+            String description = "Channel for general notifications";
+            int importance = NotificationManager.IMPORTANCE_DEFAULT;
+            NotificationChannel channel = new NotificationChannel("default_channel", name, importance);
+            channel.setDescription(description);
+            // Register the channel with the system
+            NotificationManager notificationManager = getSystemService(NotificationManager.class);
+            notificationManager.createNotificationChannel(channel);
+        }
+    }
+
 }

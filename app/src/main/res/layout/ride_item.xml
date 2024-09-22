@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/button_opening"
+    android:layout_marginBottom="10dp"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/label_driver_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="4dp"
+            android:text="Driver Name:"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/driver_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="8dp" />
+
+        <TextView
+            android:id="@+id/label_from_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="4dp"
+            android:text="From Location:"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/from_location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="8dp" />
+
+        <TextView
+            android:id="@+id/label_to_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="4dp"
+            android:text="To Location:"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/to_location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="8dp" />
+
+        <TextView
+            android:id="@+id/label_phone_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="4dp"
+            android:text="Phone Number:"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/phone_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="8dp" />
+
+        <TextView
+            android:id="@+id/label_date_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="4dp"
+            android:text="Date and Time:"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/date_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="8dp" />
+
+        <TextView
+            android:id="@+id/label_total_seats"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="4dp"
+            android:text="Total Seats:"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/total_seats"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="8dp" />
+
+        <TextView
+            android:id="@+id/label_available_seats"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="4dp"
+            android:text="Available Seats:"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/available_seats"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="8dp" />
+
+        <TextView
+            android:id="@+id/label_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="4dp"
+            android:text="Price:"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/price1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="8dp" />
+
+        <TextView
+            android:id="@+id/label_car_model"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="4dp"
+            android:text="Car Model:"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/car_model"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="8dp" />
+
+        <TextView
+            android:id="@+id/label_car_photo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="4dp"
+            android:text="Car Photo:"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/car_photo"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:paddingBottom="8dp"
+            android:scaleType="centerCrop"
+            android:layout_marginBottom="10sp"
+            android:layout_marginTop="10sp"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/join_button"
+            android:background="@drawable/secondary_round_button"
+            android:text="Join"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:layout_margin="5sp" />
+
+    </LinearLayout>
+</ScrollView>

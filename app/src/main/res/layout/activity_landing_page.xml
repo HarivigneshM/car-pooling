@@ -44,6 +44,7 @@
         app:maxImageSize="40dp"
         app:layout_anchor="@id/bottomAppBar"
         app:tint="@color/login_primary"
-        app:elevation="0dp"/>
+        app:elevation="0dp"
+        app:borderWidth="0dp"/>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

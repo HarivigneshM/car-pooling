@@ -2,6 +2,7 @@ package com.example.carpooling;
 
 import static android.content.ContentValues.TAG;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -17,6 +18,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.core.app.NotificationCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
@@ -39,10 +41,11 @@ public class landingPage extends AppCompatActivity {
 
     private AppBarConfiguration appBarConfiguration;
     private ActivityLandingPageBinding binding;
-    FirebaseFirestore fstore3;
-    FirebaseAuth fauth3;
+
     TextView name;
     FloatingActionButton mapFragmentStart;
+    FirebaseAuth fauth3;
+    FirebaseFirestore fstore3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,19 +75,7 @@ public class landingPage extends AppCompatActivity {
                 replaceFragment(new mapFragment());
             }
         });
-//        fauth3=FirebaseAuth.getInstance();
-//        fstore3=FirebaseFirestore.getInstance();
-//        name=findViewById(R.id.name);
-//
-//        String uid=fauth3.getCurrentUser().getUid();
-//        Log.d(TAG, "onCreate: "+uid);;
-//        DocumentReference documentReference=fstore3.collection("users").document(uid);
-//        documentReference.addSnapshotListener(this, new EventListener<DocumentSnapshot>() {
-//            @Override
-//            public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
-//                name.setText(value.getString("name"));
-//            }
-//        });
+
     }
     private void replaceFragment(Fragment fragment){
         FragmentManager fragmentManager=getSupportFragmentManager();

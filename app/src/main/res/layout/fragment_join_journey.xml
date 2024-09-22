@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -6,10 +5,82 @@
     android:background="@color/login_primary"
     tools:context=".JoinJourneyFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <FrameLayout
+        android:layout_width="412dp"
+        android:layout_height="842dp"
+        android:background="@drawable/car_doodle"
+        android:backgroundTint="@color/login_secondary"
+        android:foregroundTint="@color/login_secondary"
+        android:foregroundTintMode="add">
+
+    </FrameLayout>
+
+    <!-- Search Options -->
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="join" />
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <EditText
+                android:id="@+id/searchFromLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/input_login_corners"
+                android:hint="From Location"
+                android:padding="8dp"
+                android:paddingStart="20dp"
+                android:textColor="@color/login_primary" />
+
+            <EditText
+                android:id="@+id/searchToLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/input_login_corners"
+                android:hint="To Location"
+                android:padding="8dp"
+                android:paddingStart="20dp"
+                android:textColor="@color/login_primary" />
+
+            <EditText
+                android:id="@+id/searchDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/input_login_corners"
+                android:hint="Date"
+                android:padding="8dp"
+                android:paddingStart="20dp"
+                android:clickable="true"
+                android:focusable="false"
+                android:inputType="datetime"
+                android:textColor="@color/login_primary" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/searchButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/secondary_round_button"
+                android:gravity="center"
+                android:text="Search" />
+        </LinearLayout>
+
+        <!-- List of Rides -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/ridesRecyclerView"
+            android:layout_width="351dp"
+            android:layout_height="483dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/round_corners"
+            android:padding="16dp" />
+    </LinearLayout>
+
 
 </FrameLayout>
